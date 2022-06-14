@@ -10,13 +10,22 @@ let occupancy = 0;
 let channelName = "presenceTest";
 
 let allowMessage = false;
-let you = random(0,1000000);
+let you;
 
+function preload() {
+
+  you = random(0,1000000); 
+  console.log(you);
+  you = int(you);
+  console.log(you);
+  you = you.toString();
+}
+  
   
 function setup() {
 
     createCanvas(windowWidth, windowHeight);
-
+ 
     dataServer = new PubNub({
       subscribeKey: subKey,
       publishKey: pubKey,
