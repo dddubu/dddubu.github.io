@@ -45,8 +45,8 @@ function draw() {
   text("dubu </3 u", windowWidth/2, windowHeight/2);
 
 
-  textSize(400)
-  text("</3",300,550);
+  textSize(700)
+  text("</3",windowWidth/3, windowHeight/2);
 
   allowMessage = false;
 
@@ -61,8 +61,8 @@ function draw() {
   textSize(20);
   text("dubu <3 u", windowWidth/2, windowHeight/2); 
   
-  textSize(400)
-  text("<3",300,550);
+  textSize(700)
+  text("<3",windowWidth/3, windowHeight/2);
   allowmessage = false;
 
   }
