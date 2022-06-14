@@ -10,6 +10,7 @@ let occupancy = 0;
 let channelName = "presenceTest";
 
 let allowMessage = false;
+let you = random(0,1000000);
 
   
 function setup() {
@@ -19,7 +20,7 @@ function setup() {
     dataServer = new PubNub({
       subscribeKey: subKey,
       publishKey: pubKey,
-      uuid: "Your Name Here",
+      uuid: you,
       secretKey: secretKey,
       heartbeatInterval: 0,
     });
