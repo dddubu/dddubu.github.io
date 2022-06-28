@@ -7,8 +7,8 @@ let secretKey = "sec-c-ZTgyOGY0YTktYThjYS00MzBiLWIwNDItMzM2ZjEwNjJkM2Ex";
 let channelName = "race";
 let cursors = [];
 
-let x = (100,100)
-let y = (100,100)
+let xcircle = (100,100)
+let ycircle = (100,100)
 let you; 
 
 let refresh = 100;
@@ -27,6 +27,8 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255);
+  noCursor();
+
 
   // initialize our PubNub Server
   dataServer = new PubNub({
@@ -49,15 +51,8 @@ function draw() {
 
   background(255);
 
-  ellipse(x,y,20,20);
+  ellipse(xcircle,ycircle,20,20);
   
-
-
-  
-sendTheMessage(); // send the message with the cursor location every 100ms. 
-   
-  }
-
   for (let i = 0; i < cursors.length; i++) { // loop through all the cursors and show them on the page
     stroke(0);
     strokeWeight(1);
@@ -67,13 +62,22 @@ sendTheMessage(); // send the message with the cursor location every 100ms.
     }
 
 
+  
+sendTheMessage(); // send the message with the cursor location every 100ms. 
+   
+  }
+
+  
+
 function mouseClicked(){
-  if ((mouseX > x-10) && (mouseX < x+20) &&
-  (mouseY > y-10) && (mouseY < y+20)) {
+  if ((mouseX > xcircle-10) && (mouseX < xcircle+20) &&
+  (mouseY > ycircle-10) && (mouseY < ycircle+20)) {
   //background(255);
-   fill(240, 20, 140);
+   //fill(240, 20, 140);
+   xcircle = random(0,400)
+   ycircle = random(0,400)
 } else {
-  fill(128);
+  //fill(128);
 }
 
 }
@@ -130,4 +134,6 @@ function allCursors(x,y,you){ // creates a new JSON object for us
   this.you = you;
 
 }
+
+
 
