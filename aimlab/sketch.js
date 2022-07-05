@@ -77,7 +77,7 @@ function draw() {
 
 
   
-sendTheMessage(); // send the message with the cursor location every 100ms. 
+sendTheMessage(1); // send the message with the cursor location every 100ms. 
    
   }
 
