@@ -12,8 +12,10 @@ let cursors = [];
 let xcircle = (500,500)
 let ycircle = (500,500)
 let you; 
+let timeLimit = 30;
+let countdown;
 
-let refresh = 20;
+let refresh = 100;
 let lastRefresh = 0;
 
 let race = "Click the circles before your classmates!";
@@ -30,7 +32,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255);
- // noCursor();
+  //noCursor();
   //text(race,windowWidth/2,100,100,100);
 
 
@@ -66,6 +68,13 @@ function draw() {
     line(cursors[i].x-5,cursors[i].y,cursors[i].x+5,cursors[i].y);
     }
 
+ let currentTime = int(millis() /1000);
+    countdown = timeLimit - currentTime;
+    
+    
+    textSize(24);
+    text("TIME: " + currentTime, 10,20);
+
 
   
 sendTheMessage(); // send the message with the cursor location every 100ms. 
@@ -75,8 +84,8 @@ sendTheMessage(); // send the message with the cursor location every 100ms.
   
 
 function mouseClicked(){
-  if ((mouseX > xcircle-10) && (mouseX < xcircle+20) &&
-  (mouseY > ycircle-10) && (mouseY < ycircle+20)) {
+  if ((mouseX > xcircle-25) && (mouseX < xcircle+25) &&
+  (mouseY > ycircle-25) && (mouseY < ycircle+25)) {
   //background(255);
    //fill(240, 20, 140);
    xcircle = random(0,windowWidth-100)
