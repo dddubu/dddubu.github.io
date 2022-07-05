@@ -30,7 +30,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255);
-  noCursor();
+ // noCursor();
   //text(race,windowWidth/2,100,100,100);
 
 
