@@ -15,7 +15,7 @@ let you;
 let timeLimit = 30;
 let countdown;
 
-let refresh = 100;
+let refresh = 20;
 let lastRefresh = 0;
 
 let race = "Click the circles before your classmates!";
