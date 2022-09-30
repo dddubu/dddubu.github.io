@@ -26,14 +26,14 @@ function setup() {
 }
 
 function draw() {
-  //background(20);
+  background(255);
   //fill(220);
  // textSize(20);
   image(imgs[idx], 0, 0);
-  a1.resize(1000,500);
- a2.resize(1000,500);
-  a3.resize(1000,500);
-  a4.resize(1000,500);
+  a1.resize(1000,450);
+ a2.resize(1000,450);
+  a3.resize(1000,450);
+  a4.resize(1000,450);
 }
 function mouseClicked() {
   idx++;
