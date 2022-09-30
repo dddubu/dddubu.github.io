@@ -30,10 +30,10 @@ function draw() {
   //fill(220);
  // textSize(20);
   image(imgs[idx], 0, 0);
-  a1.resize(800,400);
- a2.resize(800,400);
-  a3.resize(800,400);
-  a4.resize(800,400);
+  a1.resize(1000,500);
+ a2.resize(1000,500);
+  a3.resize(1000,500);
+  a4.resize(1000,500);
 }
 function mouseClicked() {
   idx++;
