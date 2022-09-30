@@ -30,10 +30,11 @@ function draw() {
   //fill(220);
  // textSize(20);
   image(imgs[idx], 0, 0);
- // a1.resize(400,400);
- // a2.resize(400,400);
+  a1.resize(400,800);
+ a2.resize(400,800);
+  a3.resize(400,800);
+  a4.resize(400,800);
 }
-
 function mouseClicked() {
   idx++;
   if (idx > imgs.length - 1) {
